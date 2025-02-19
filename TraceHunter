@@ -42,4 +42,4 @@ echo -e "\033[0;95m Listando o diretório raíz... \033[0m"
 ls -la / "$COLLECTED_DIR" > "$COLLECTED_DIR/root_dir_list.txt"
 
 # Compactação e Nomeação do Arquivo de Saída
-tar -czf "TraceHunter_{Hostname}_{DataHora}.tar.gz"
+tar -czf "TraceHunter_$(hostname)_$(date '+%d-%m-%Y_%H-%M-%S').tar.gz" "$COLLECTED_DIR"
